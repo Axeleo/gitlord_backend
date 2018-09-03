@@ -13,7 +13,6 @@ class Resolvers::SignInUser < GraphQL::Function
     return unless args
     input = args[:email]
 
-    # basic validation
     return unless input
 
     user = User.find_by email: input[:email]
