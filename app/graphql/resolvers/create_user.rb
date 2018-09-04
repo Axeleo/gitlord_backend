@@ -14,6 +14,7 @@ module Resolvers
     def call(_obj, args, _ctx)
       User.create!(
         name: args[:name],
+        github: args[:github],
         email: args[:authProvider][:email][:email],
         password: args[:authProvider][:email][:password]
       )
